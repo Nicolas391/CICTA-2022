@@ -1,0 +1,82 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+/* Base */
+@import "site-base";
+/* Navbar */
+@import "site-navbar";
+/* Blocks */
+@import "site-blocks";
+
+.hero__slider {
+
+    &.owl-carousel {
+  
+      .owl-item {
+  
+        &.active {
+  
+          .hero__text {
+  
+            span {
+              top: 0;
+              opacity: 1;
+            }
+  
+            h2 {
+              top: 0;
+              opacity: 1;
+            }
+  
+            .primary-btn {
+              top: 0;
+              opacity: 1;
+            }
+          }
+        }
+      }
+  
+      .owl-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 45px;
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+  
+        button {
+          color: #adadad;
+          font-size: 18px;
+          font-family: 'Play', sans-serif;
+          margin-right: 16px;
+          position: relative;
+          display: inline-block;
+  
+          &.active {
+            color: $white-color;
+  
+            &:after {
+              background: $white-color;
+              height: 2px;
+            }
+          }
+  
+          &:after {
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.3);
+            content: "";
+          }
+  
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
